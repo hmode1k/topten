@@ -1,0 +1,15 @@
+/* Tailwind entry point. Theme tokens live in tailwind.config.js. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-forest font-body text-white antialiased;
+  }
+
+  /* Visible keyboard focus everywhere, in the gold accent. */
+  :focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-gold;
+  }
+}
