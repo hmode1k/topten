@@ -11,6 +11,7 @@ export interface Question {
   title: string // "أندر ١٠ عناصر"
   difficulty: Difficulty
   hints?: string[] // shown one at a time
+  topTag?: string // small tag on the rank-1 slot, e.g. "الأندر"
   answers: Answer[] // exactly 10
 }
 

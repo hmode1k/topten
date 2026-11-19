@@ -9,6 +9,7 @@ const minecraftQuestions: Question[] = [
     id: 'mc-rarest-items',
     title: 'أندر ١٠ عناصر',
     difficulty: 'easy',
+    topTag: 'الأندر',
     hints: ['أندرها يُحصل عليه بعد هزيمة التنين', 'فيها عنصر يمنحك الطيران'],
     answers: [
       a(1, 'بيضة التنين', ['بيضه التنين', 'دراغون ايج']),
@@ -27,6 +28,7 @@ const minecraftQuestions: Question[] = [
     id: 'mc-dangerous-mobs',
     title: 'أخطر ١٠ وحوش',
     difficulty: 'easy',
+    topTag: 'الأخطر',
     hints: ['أخطرها يتكوّن من جماجم', 'بعضها ينفجر بالقرب منك'],
     answers: [
       a(1, 'الويذر', ['وذر']),
@@ -45,6 +47,7 @@ const minecraftQuestions: Question[] = [
     id: 'mc-expensive-blocks',
     title: 'أغلى ١٠ بلوكات',
     difficulty: 'medium',
+    topTag: 'الأغلى',
     hints: ['أغلاها يُصنع من خامة النذرايت', 'فيها بلوك أزرق وبلوك أخضر'],
     answers: [
       a(1, 'بلوك النذرايت', ['نذرايت', 'نيذرايت']),
