@@ -1,15 +1,30 @@
-/* Tailwind entry point. Theme tokens live in tailwind.config.js. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-forest font-body text-white antialiased;
-  }
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+  letter-spacing: 0;
+}
 
-  /* Visible keyboard focus everywhere, in the gold accent. */
-  :focus-visible {
-    @apply outline outline-2 outline-offset-2 outline-gold;
-  }
+/* Visible mint focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid #4ADE80;
+  outline-offset: 2px;
+}
+
+@keyframes slot-fill {
+  0% { transform: scale(0.97); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes wrong-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+.anim-fill { animation: slot-fill 0.25s ease-out; }
+.anim-shake { animation: wrong-shake 0.3s ease-in-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-fill, .anim-shake { animation: none; }
 }

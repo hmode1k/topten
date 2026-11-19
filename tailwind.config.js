@@ -1,53 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-
-/**
- * Design tokens for the site.
- *
- * Every color used in the UI is defined here, so re-theming the whole site
- * means editing this one file (e.g. swap the gold accent, or the greens).
- * Components only use these names (bg-forest, text-ink, border-gold, ...)
- * and never raw hex values.
- */
 export default {
-  content: ['./index.html', './src/**/*.{js,jsx}'],
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        // --- Dark green surfaces (page + sidebar) ---
-        forest: {
-          DEFAULT: '#0A2A20', // page background
-          panel: '#123F31', // sidebar cards
-          row: '#0F3528', // rows inside sidebar cards
-          line: '#1F5A45', // borders on dark panels
-          divider: '#1B4A39', // header / footer divider lines
-          ring: '#2A6650', // outlined icon buttons on dark
-        },
-        // --- Greens used on light surfaces ---
-        pine: '#1B5E43', // buttons, progress bar, active outlines
-        ink: '#0F3D2E', // main text on light surfaces
-        // --- Light surfaces ---
-        cream: '#F6F4EE', // game card background
-        mint: '#DDEFE6', // "correct" chip background
-        slot: '#E6EFE9', // hidden answer slot background
-        'slot-line': '#DCE6DF', // light borders
-        // --- Text helpers ---
-        muted: '#4F6A5E', // secondary text on light surfaces
-        'muted-dark': '#A9C4B7', // secondary text on dark surfaces
-        'slot-text': '#8AA397', // "؟؟؟؟" placeholder text in hidden slots
-        // --- Accents ---
-        gold: '#C9A24B', // rank badges, "10" underline, streak number
-        danger: '#C62F3F', // used mistakes
-        'danger-soft': '#FBE4E4', // wrong-answer chip background
+        bg: '#140B26',
+        card: '#1F1338',
+        card2: '#271A47',
+        ink: '#F5F1FF',
+        mut: '#B3A6D4',
+        soft: '#7F71A8',
+        line: '#33265C',
+        brand: { DEFAULT: '#4ADE80', ink: '#0F2A1A', tint: 'rgba(74,222,128,0.14)' },
+        violet: { DEFAULT: '#7C52F0', tint: '#2E1B63' },
+        pink: { DEFAULT: '#FF6B93', tint: '#3B1635' },
+        track: '#2C2150',
       },
-      fontFamily: {
-        // Loaded from Google Fonts in index.html
-        display: ['Cairo', 'sans-serif'],
-        body: ['Tajawal', 'sans-serif'],
-      },
-      boxShadow: {
-        card: '0 24px 60px rgba(0,0,0,0.35)',
-      },
+      fontFamily: { sans: ['Tajawal', 'system-ui', 'sans-serif'] },
+      borderRadius: { card: '22px', btn: '14px' },
+      boxShadow: { glow: '0 12px 30px -12px rgba(74,222,128,.55)' },
+      letterSpacing: { normal: '0' },
     },
   },
   plugins: [],
-};
+}
